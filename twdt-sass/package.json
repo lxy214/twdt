@@ -1,0 +1,49 @@
+{
+	"name": "@twdt/sass",
+	"version": "0.0.1",
+	"description": "A modern alternative to Sass",
+	"main": "",
+	"files": [
+		"lib/**",
+		"dist/**",
+		"examples/**"
+	],
+	"scripts": {
+		"lint-staged": "lint-staged",
+		"pub": "npm publish --access public",
+		"build": "gulp build"
+	},
+	"author": "twdt-team",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lxy214/twdt-sass"
+	},
+	"bugs": {
+		"url": "https://github.com/lxy214/twdt-sass/issues"
+	},
+	"devDependencies": {
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-sass": "^5.0.0",
+		"gulp-strip-css-comments": "^2.0.0",
+		"lint-staged": "^11.1.1",
+		"node-sass": "^6.0.1",
+		"pre-commit": "^1.2.2",
+		"sass": "^1.37.5",
+		"stylelint": "^13.13.1",
+		"stylelint-config-standard": "^22.0.0"
+	},
+	"lint-staged": {
+		"*.scss": [
+			"stylelint --fix --syntax scss",
+			"git add"
+		]
+	},
+	"pre-commit": [
+		"lint-staged"
+	]
+}
